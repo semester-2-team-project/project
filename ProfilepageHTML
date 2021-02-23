@@ -1,1 +1,29 @@
-
+<!DOCTYPE html>
+<html>
+<head>
+<title>StudentHub</title>
+</head>
+<body>
+<header>Header
+<nav>
+<ul>Nav
+<li><a href="#">element1</a></li>
+<li><a href="#">element2</a></li>
+</ul>
+</nav>
+</header>
+<img src="" alt="Profile picture for user." width="250" height="250">
+<p> 
+Student Name
+</br>
+Course
+</br>
+<ul>Rooms
+<li>room1</li>
+<li>room2</li>
+</ul>
+</p>
+<footer>
+Footer</footer>
+</body>
+</html>
