@@ -1,35 +1,28 @@
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-<meta content="width=device-width, initial-scale=1" name="viewport" />
-
-<link rel="icon" href="images/lego.png">
-<title>Login page</title>
-</head>
+  <head>
+    <title> Brihgton Hub Login </title>
+    <meta charset = "UTF-8">
+    <link rel = "stylesheet" href = "style.css">
+  </head>
   <body>
-    <div>
-      <! -- This will be the title div--> 
-    <h1>The brigthon hub Login page</h1>
-      <h3>  Please enter your details below</h3>
-    </div>
-   
-    <div> 
- <! -- This will be the input--> 
+    <section>
+      <h1 title = "The Brighton Hub login"> The Brighton Hub login </h1>
+      <h2 title = "Enter details here"> Enter your details below</h2>
+    </section>
+
+    <div class ="inputDetails"><!--The input area -->
       <form action="" method="post">
-    		Username:<input type="text" name="username">
-    		<br> 
+    		Username/e-mail:<input type="text" name="username">
+    		<br>
     		Password:    <input type="text" name="password">
     		<br>
     		<input type="submit" value="submit">
     	</form>
     </div>
-    
-    <div> 
-  
+
+    <div>
+      <img class = BHubLogo src = "BUHubLogo.png" alt = "Brighton Hub logo">
     </div>
-    
   </body>
 </html>
