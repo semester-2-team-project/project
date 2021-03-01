@@ -1,133 +1,120 @@
-/*
-html5doctor.com Reset Stylesheet
-v1.6.1
-Last Updated: 2010-09-17
-Author: Richard Clark - http://richclarkdesign.com
-Twitter: @rich_clark
-*/
-
-html, body, div, span, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-abbr, address, cite, code,
-del, dfn, em, img, ins, kbd, q, samp,
-small, strong, sub, sup, var,
-b, i,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section, summary,
-time, mark, audio, video {
-    margin:0;
-    padding:0;
-    border:0;
-    outline:0;
-    font-size:100%;
-    vertical-align:baseline;
-    background:transparent;
-}
 
 body {
     line-height:1;
 }
 
-article,aside,details,figcaption,figure,
-footer,header,hgroup,menu,nav,section {
-    display:block;
-}
-
-nav ul {
-    list-style:none;
-}
-
-blockquote, q {
-    quotes:none;
-}
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-    content:'';
-    content:none;
-}
-
-a {
-    margin:0;
-    padding:0;
-    font-size:100%;
-    vertical-align:baseline;
-    background:transparent;
-}
-
-/* change colours to suit your needs */
-ins {
-    background-color:#ff9;
-    color:#000;
-    text-decoration:none;
-}
-
-/* change colours to suit your needs */
-mark {
-    background-color:#ff9;
-    color:#000;
-    font-style:italic;
-    font-weight:bold;
-}
-
-del {
-    text-decoration: line-through;
-}
-
-abbr[title], dfn[title] {
-    border-bottom:1px dotted;
-    cursor:help;
-}
-
-table {
-    border-collapse:collapse;
-    border-spacing:0;
-}
-
-/* change border colour to suit your needs */
-hr {
-    display:block;
-    height:1px;
-    border:0;
-    border-top:1px solid #cccccc;
-    margin:1em 0;
-    padding:0;
-}
-
-input, select {
+input {
     vertical-align:middle;
 }
-/*reset css ends here*/
 
 h1{
-  color: navy;
+  color: black;
   font-size: 48px;
   text-align: center;
   margin: 0px;
-  margin-top: 10%;
+  margin-top: 20px;
+  margin-right:715px;
   background-color: lightgrey;
 
 }
+
 h2{
   color: blue;
-  font-size: 24px;
+  padding:15px;
+  Height: 30px;
+  width: 760px;
+  font-size: 32px;
   text-align: center;
   margin: 0px;
-  margin-top: 2.5%;
+  margin-top: 10px;
+  margin-right:810px;
   background-color: lightgrey;
 }
+
 p{
   color: #rgba(0, 0, 0, 0.5);
   bakcground-color: rgb(0,0,0);
 }
 
-.BHubLogo{
-  margin: 10px auto 20px;
-  display: block;
-}
-.inputDetails{ /*this should center the login details*/
+
+.inputDetails1{ /*this should center the login details*/
   margin: 0 auto;
+  color: black;
+  Height: 200px;
+  width:785px;
+  border: 3px solid white;
+  border-radius: 7px;
+  font-size: 28px;
+  text-align: center;
+  margin: 0px;
+  margin-top: 10px;
+  margin-left: 0px;
+  margin-right:815px;
+  background-color: white;
+}
+
+.image{
+  margin: 0 auto;
+  Height: 600px;
+  width:699px;
+  color: black;
+  border: 3px solid black;
+  font-size: 28px;
+  text-align: center;
+  margin: 10px;
+  margin-top: -383px;
+  margin-left: 800px;
+  margin-right:10px;
+  background-color: lightgrey;
+}
+
+.Textinput{
+  width:230px;
+  height:30px;
+  border: 3px solid black;
+  border-radius: 5px;
+  margin:30px;
+  background-color: lightgrey;
+}
+
+.Submitbutton[type=submit]{
+  width: 20%;
+  padding: 12px 20px;
+  margin: 25px ;
+  box-sizing: border-box;
+  border: 3px solid #ccc;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+}
+
+.Submitbutton[type=submit]:hover {
+  width: 40%;
+  border: 3px solid darkgreen;
+  background-color: lightgreen;
+}
+
+input[type=text] {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 4px ;
+  box-sizing: border-box;
+  border: 3px solid #ccc;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+}
+
+input[type=text]:hover {
+  border: 3px solid #555;
+  background-color: white;
+}
+
+.seperator{
+  background-color: lightgrey;
+  margin-left:100px;
+  margin-top:50px;
+  Height: 3px;
+  width:600px;
+
 }
