@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Brighton University Student Chatroom and Shop."
+    />
+    <meta
+      property="og:title"
+      content="Brighton Hub - Brighton University Student Chatroom and Shop."
+    />
+    <meta
+      property="og:description"
+      content="Brighton Hub is a student run website for students providing a virtual space to chat, form study groups and buy and sell study supplies."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="images/brighton_uni_logo.png" />
+    <meta property="og:url" content="http://ao485.brighton.domains/" />
+    <title>Brighton Hub - Student Chat & Shop</title>
+    <!-- Favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="images/favicon/site.webmanifest" />
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="profile.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  </head>
+
+  <body>
+    <!-- Header Nav--------------------------------------------------------------------------->
+    <header>
+      <nav class="nav collapsible">
+        <a aria-label="Brighton Hub" class="nav__brand" href="/">
+          <img src="images/brighton_uni_logo@320px.png" alt="" />
+        </a>
+        <svg class="icon icon--white nav__toggler">
+          <use href="images/sprite.svg#menu"></use>
+        </svg>
+        <ul class="list nav__list collapsible__content">
+          <li class="nav__item">
+            <a class="active" target="_blank" href="#">Hub</a>
+          </li>
+          <li class="nav__item">
+            <a target="_blank" href="#">Shop</a>
+          </li>
+          <li class="nav__item">
+            <a target="_blank" href="#">Chatroom</a>
+          </li>
+          <li class="nav__item">
+            <a class="highlight" target="_blank" href="#">Login</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Hero ------------------------------------------------------------------------------>
+    <section class="block block--dark block--skewed-curve hero">
+      <div class="container grid grid--1x2">
+        <header class="block__header hero__content">
+          <h1 data-aos="zoom-in-up" class="block__heading">
+            Hello, This Is Your Profile Page!
+          </h1>
+          <hr />
+          <p class="hero__tagline">Access and edit you personal information anytime.</p>
+        </header>
+        <picture data-aos="zoom-in">
+          <!-- <source
+            type="image/webp"
+            srcset="images/brighton_uni_logo.webp 1x, images/brighton_uni_logo@2x.webp 2x"
+          /> -->
+          <source
+            type="image/png"
+            srcset="
+              images/brighton_uni_logo.png    1x,
+              images/brighton_uni_logo@2x.png 2x
+            "
+          />
+          <img
+            class="hero__image"
+            src="images/brighton_uni_logo.png"
+            alt="Brighton Hub logo"
+          />
+        </picture>
+      </div>
+    </section>
+
+    <!-- Profile Cards Section ----------------------------------------------------------------------- -->
+    <section
+      data-aos="fade-up"
+      class="block container block--skewed-left block-cards"
+    >
+      <div class="grid grid--1x2">
+        <div class="plan">
+            <div class="profileCard">
+              <center><img src="avatar.png" alt="Avatar Icon"/><center>
+              <h2>Kingsley Wright</h2>
+              <p>18002325</p>
+              <p>Computer Science with Cyber Security</p>
+              <p>Moulsecoomb Campus</p>
+            </div>
+          </div>
+
+        <div class="plan">
+            <div class="profileCard">
+              <h3>Active Chatroom</h3>
+              <a href="#"><li> Computer Science</li></a>
+              <a href="#"><li> Computer Science with Cyber Security</li></a>
+
+              <hr />
+
+              <h3>Previous Orders From Shop</h3>
+              <img src="pens.jpeg" alt="Pens">
+              <img src="notebooks.jpg" alt="Notebooks">
+              <img src="highlighters.jpeg" alt="Highlighters">
+
+              <hr />
+
+              <h3>Linked Socials</h3>
+              <div class="social">
+                <a href="#" target="blank">
+                  <img
+                    class="icon"
+                    src="images/icons/facebook_color.svg"
+                    alt="Facebook"
+                  />
+                </a>
+
+                <a href="#" target="blank">
+                  <img
+                    class="icon"
+                    src="images/icons/twitter_color.svg"
+                    alt="Twitter"
+                  />
+                </a>
+
+                <a href="#" target="blank">
+                  <img
+                    class="icon"
+                    src="images/icons/instagram_color.svg"
+                    alt="Instagram"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+      </div>
+
+    <!-- Footer -------------------------------------------------------------------------- -->
+    <footer class="block block--dark footer">
+      <div class="container grid footer__sections">
+        <section class="collapsible collapsible--expanded footer__section">
+          <div class="collapsible__header">
+            <h2 class="collapsible__heading footer__heading">Social</h2>
+            <svg class="icon icon--white collapsible__chevron">
+              <use href="images/sprite.svg#chevron"></use>
+            </svg>
+          </div>
+          <div class="collapsible__content">
+            <ul class="list">
+              <li>
+                <a href="#" target="blank">
+                  <img
+                    class="icon"
+                    src="images/icons/facebook_color.svg"
+                    alt="Facebook"
+                  />
+                </a>
+              </li>
+              <li>
+                <a href="#" target="blank">
+                  <img
+                    class="icon"
+                    src="images/icons/twitter_color.svg"
+                    alt="Twitter"
+                  />
+                </a>
+              </li>
+              <li>
+                <a href="#" target="blank">
+                  <img
+                    class="icon"
+                    src="images/icons/instagram_color.svg"
+                    alt="Instagram"
+                  />
+                </a>
+              </li>
+              <li>
+                <a href="#" target="blank">
+                  <img
+                    class="icon"
+                    src="images/icons/youtube_color.svg"
+                    alt="YouTube"
+                  />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section class="collapsible footer__section">
+          <div class="collapsible__header">
+            <h2 class="collapsible__heading footer__heading">Support</h2>
+            <svg class="icon icon--white collapsible__chevron">
+              <use href="images/sprite.svg#chevron"></use>
+            </svg>
+          </div>
+          <div class="collapsible__content">
+            <ul class="list">
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">App</a></li>
+            </ul>
+          </div>
+        </section>
+        <section class="collapsible footer__section">
+          <div class="collapsible__header">
+            <h2 class="collapsible__heading footer__heading">Legal</h2>
+            <svg class="icon icon--white collapsible__chevron">
+              <use href="images/sprite.svg#chevron"></use>
+            </svg>
+          </div>
+          <div class="collapsible__content">
+            <ul class="list">
+              <li><a href="#">Privacy</a></li>
+              <li><a href="#">Terms &amp; Conditions</a></li>
+              <li><a href="#">FAQ</a></li>
+            </ul>
+          </div>
+        </section>
+        <div class="footer__brand">
+          <img
+            src="images/brighton_uni_logo@320px.png"
+            alt="Brighton Hub logo"
+          />
+          <p class="footer__copyright">Copyright &copy; 2021 Brighton Hub</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
