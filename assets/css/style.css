@@ -1,5 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap");
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600);
+@import url(https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap);
+
+:root {
+  --color-primary: #4f5bff;
+  --color-secondary: #4fb9ff;
+  --color-tertiary: #53fff1;
+  --color-accent: #ff3400;
+  --color-headings: #e2e2e2;
+  --color-body: #f1f1f1;
+  --color-body-darker: #5c5577;
+  --color-border: #ccc;
+  --border-radius: 30px;
+}
+
 *,
 *:before,
 *:after {
@@ -43,7 +57,10 @@ button {
 }
 
 body {
-  font-family: "DM Sans", sans-serif;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 2rem;
+  line-height: 1.5;
+  /* color: var(--color-body); */
 }
 
 .responsive-container {
@@ -64,6 +81,7 @@ button {
 
 .header {
   border-bottom: 1px solid #d0d0d0;
+  background: var(--color-secondary);
   min-height: 60px;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
@@ -107,6 +125,7 @@ button {
 .logo {
   font-size: 40px;
   font-weight: bold;
+  color: var(--color-body);
 }
 
 main {
@@ -133,6 +152,7 @@ main {
   font-weight: 400;
   transition: 0.15s ease;
   overflow: hidden;
+  border-radius: 25px;
 }
 
 .product-image {
@@ -151,7 +171,7 @@ main {
   align-items: center;
   justify-content: space-between;
   transition: 0.15s ease;
-  background-color: #FFF;
+  background-color: #fff;
 }
 
 .product-title {
@@ -207,13 +227,13 @@ input#search-bar {
   height: 40px;
   padding: 0 20px;
   font-size: 15px;
-  border: 1px solid #D0CFCE;
+  border: 1px solid #d0cfce;
   outline: none;
 }
 input#search-bar:focus {
-  border: 1px solid #008ABF;
+  border: 1px solid #008abf;
   transition: 0.35s ease;
-  color: #008ABF;
+  color: #008abf;
 }
 input#search-bar:focus::-webkit-input-placeholder {
   transition: opacity 0.45s ease;
@@ -268,4 +288,181 @@ input#search-bar:focus:-ms-placeholder {
 
 .table-cart > tr > td {
   vertical-align: middle !important;
+}
+
+/* Footer ------------------------------------------------------------------------------------------------ */
+
+.footer {
+  background: #232323;
+  padding-top: 10rem;
+  color: var(--color-body);
+}
+
+.footer a {
+  color: #777;
+  transition: color 0.3s;
+}
+
+.footer a:hover {
+  color: #fff;
+}
+
+.footer__section {
+  padding: 2rem;
+  border-bottom: 1px solid #393939;
+}
+
+.footer__section .list {
+  margin: 0;
+}
+
+.footer__heading {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 2.5rem;
+  line-height: 1.5;
+}
+
+.footer__brand {
+  margin-top: 5rem;
+  text-align: center;
+}
+
+.footer__brand img {
+  max-width: 100px;
+}
+
+.footer__copyright {
+  font-size: 2.1rem;
+  color: #fff;
+  opacity: 0.3;
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
+    font-size: 1.5rem;
+  }
+  .footer__sections {
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  }
+  .footer .collapsible__chevron {
+    display: none;
+  }
+  .footer .collapsible__content {
+    opacity: 1;
+    max-height: 100%;
+  }
+  .footer__brand {
+    order: -1;
+    margin-top: 1rem;
+  }
+  .footer__copyright {
+    font-size: 1.5rem;
+  }
+  .footer__section {
+    border: 0;
+  }
+  .footer__heading {
+    font-size: 1.6rem;
+  }
+}
+
+/* Icons ---------------------------------------------------------------------------------------------- */
+
+.icon {
+  width: 40px;
+  height: 40px;
+}
+.icon--small {
+  width: 30px;
+  height: 30px;
+}
+
+.icon--primary {
+  fill: var(--color-primary);
+}
+
+.icon--white {
+  fill: #fff;
+}
+
+.icon-container {
+  background: #f3f9fa;
+  width: 64px;
+  height: 64px;
+  border-radius: 100%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-container--accent {
+  background: var(--color-accent);
+}
+
+/* Links ---------------------------------------------------------------------------------------------- */
+
+a {
+  text-decoration: none;
+}
+
+/* Lists ---------------------------------------------------------------------------------------------- */
+
+.list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.list--inline .list__item {
+  display: inline-block;
+  margin-right: 2rem;
+}
+
+.list--tick {
+  list-style-image: url(../images/tick.svg);
+  padding-left: 3rem;
+  color: var(--color-headings);
+}
+
+.list--tick .list__item {
+  padding-left: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .list--tick .list__item {
+    padding-left: 0;
+  }
+}
+
+/* Plans (Items within the cards in block 1 - Shop, Chatroom profile) ---------------------------------- */
+
+.plan {
+  transition: transform 0.2s ease-out;
+}
+
+.plan__name {
+  color: #fff;
+  margin: 0;
+  font-weight: 500;
+  font-size: 2rem;
+}
+
+.plan:hover {
+  transform: scale(1.05);
+}
+
+@media screen and (min-width: 1024px) {
+  .plan__name {
+    font-size: 3rem;
+  }
+  .plan__price {
+    font-size: 5rem;
+  }
+  .plan__billing-cycle {
+    font-size: 1.6rem;
+  }
+  .plan__description {
+    font-size: 1.7rem;
+  }
 }
