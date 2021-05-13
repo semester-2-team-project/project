@@ -77,6 +77,8 @@ p{
   background-color: lightgrey;
 }
 
+
+
 .Submitbutton[type=submit]{
   width: 20%;
   padding: 12px 20px;
@@ -94,7 +96,7 @@ p{
   background-color: lightgreen;
 }
 
-input[type=text] {
+input[type=text][type=password] {
   width: 50%;
   padding: 12px 20px;
   margin: 4px ;
@@ -109,7 +111,10 @@ input[type=text]:hover {
   border: 3px solid #555;
   background-color: white;
 }
-
+input[type=password]:hover{
+  border: 3px solid #555;
+  background-color: white;
+}
 .seperator{
   background-color: lightgrey;
   margin-left:100px;

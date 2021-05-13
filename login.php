@@ -1,16 +1,27 @@
-<?php echo htmlspecialchars($_POST['username', 'password']);
+<?php
+include 'userDb.php';
 
-$servername = "localhost";
-$username = "username";
-$password = "password";
-$dbname = "userlist";
-$tablename = "users";
+#Building query
+$query = "SELECT * FROM email;";
+$response = mysqli_query($connect, $query);
+ 
+#Reading rows
+if (!empty($_POST['submit'])){
+$name = $_POST["username"];
+$password = $_POST["password"];
 
-$connect = new mysqli($servername, $username, $password, $dbname);
-if ($connect->connection_aborted || $connect->connect_error){
-    die("Connection failed: " . $conn->connect_error)
 }
 
+    
+    
+    
+    
+    #while ($row = mysqli_fetch_assoc($result)) {
+     #   echo "<p>";
+      #  echo "$row['name']";
+       # echo "<br>";
+        #echo "$row['email']";
+        #echo "</p>"
+   # }
 
-?>
 

@@ -9,6 +9,13 @@ const products = [
 { id: 8, title: '8', price: 10, qty: 1, image: 'http://lorempixel.com/150/150/' }];
 
 
+$(document).ready( function() {
+  $.get("#/market.php", function(data){
+  $("#id").load();
+    
+  }
+})
+
 function formatNumber(n, c, d, t) {
   var c = isNaN(c = Math.abs(c)) ? 2 : c,
   d = d === undefined ? '.' : d,
