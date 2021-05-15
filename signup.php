@@ -1,6 +1,5 @@
 <?php
 include 'userDb.php';
-#include 'checks.php';
 
 #Reading rows
 $uname = "";
@@ -28,18 +27,31 @@ else{
 #}
 
 
-#Building querys
-$queryUsers = "SELECT * FROM users WHERE usersName=$uname;";
-$queryEmails = "SELECT * FROM users WHERE email=$email;";
-$responseUsers = mysqli_query($connect, $queryUsers);
-$responseEmails = mysqli_query($connect, $queryEmails);
+
+#Checking if user exists
 
 
-#if (mysqli_num_rows($responseUsers) > 0 ){                                 #Checks for existence of username, redirects back to signup if credentials already exist.
-#    exit(header("Location: https://jeh80.brighton.domains/signup.html"));
-#}
-#else{
-    $newUser = "INSERT INTO users (usersName, email, pass) VALUES ('$uname', '$email', '$password');";
-    $insert = mysqli_query($connect, $newUser);#
-    exit();
-#}
+$sql = "SELECT * FROM users WHERE email = ?;";
+$resp = mysqli_stmt_init($connect);
+if (!mysqli_stmt_prepare($resp, $sql)){
+    exit(header("Location: https://jeh80.brighton.domains/signup.html?error=statementFailed"));
+}
+mysqli_stmt_bind_param($resp, "s", $email);
+mysqli_stmt_execute($resp);
+$result = mysqli_stmt_get_result($resp);
+
+    #if(mysqli_fetch_assoc($result)){
+
+   # }
+
+
+
+if ($result->num_rows > 0){
+    exit(header("Location: https://jeh80.brighton.domains/signup.html?error=userExists"));
+}
+else {
+$newUser = "INSERT INTO users (usersName, email, pass) VALUES ('$uname', '$email', '$password');";
+$insert = mysqli_query($connect, $newUser);#
+exit(header("Location: https://jeh80.brighton.domains/market.html?name=$uname"));
+}
+    
