@@ -44,12 +44,12 @@
       rel="stylesheet"
     />
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="assets/css/styles.css"/>
+    <link rel="stylesheet" href="assets/css/profile.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
 
   <body>
-    <!-- Header Nav------------------------------------------------------------------------- -->
+    <!-- Header Nav--------------------------------------------------------------------------->
     <header>
       <nav class="nav collapsible">
         <a aria-label="Brighton Hub" class="nav__brand" href="/">
@@ -69,21 +69,21 @@
             <a target="_blank" href="index.html">Chatroom</a>
           </li>
           <li class="nav__item">
-            <a class="highlight" target="_blank" href="login.html">Login</a>
+            <a class="highlight" target="_blank" href="#">Login</a>
           </li>
         </ul>
       </nav>
     </header>
 
-    <!-- Hero ---------------------------------------------------------------------------- -->
+    <!-- Hero ------------------------------------------------------------------------------>
     <section class="block block--dark block--skewed-curve hero">
       <div class="container grid grid--1x2">
         <header class="block__header hero__content">
           <h1 data-aos="zoom-in-up" class="block__heading">
-            Welcome to the student hub
+            Hello, This Is Your Profile Page!
           </h1>
           <hr />
-          <p class="hero__tagline">Access the shop or chatroom anytime.</p>
+          <p class="hero__tagline">Access and edit you personal information anytime.</p>
         </header>
         <picture data-aos="zoom-in">
           <!-- <source
@@ -99,139 +99,73 @@
           />
           <img
             class="hero__image"
-            src="images/brighton_uni_logo.png"
+            src="assets/images/BUHubLogo.png"
             alt="Brighton Hub logo"
           />
         </picture>
       </div>
     </section>
 
-    <!-- Cards Section -------------------------------------------------------------------------- -->
+    <!-- Profile Cards Section ----------------------------------------------------------------------- -->
     <section
       data-aos="fade-up"
       class="block container block--skewed-left block-cards"
     >
-      <div class="grid grid--1x3">
-        <a href="market.html">
-          <div class="plan">
-            <div class="card card--primary">
-              <div class="card__body">
-                <img src="images/icons/shop_color.svg" alt="Shop" />
-              </div>
-              <header class="card__header">
-                <h3 class="plan__name">Shop</h3>
-              </header>
+      <div class="grid grid--1x2">
+        <div class="plan">
+            <div class="profileCard">
+              <center><img src="assets/images/avatar.png" alt="Avatar Icon"/><center>
+              <h2>Kingsley Wright</h2>
+              <p>18002325</p>
+              <p>Computer Science with Cyber Security</p>
+              <p>Moulsecoomb Campus</p>
             </div>
           </div>
-        </a>
-        <a href="index.html">
-          <div class="plan">
-            <div class="card card--secondary">
-              <div class="card__body">
-                <img src="images/icons/chat_color.svg" alt="Chatroom" />
-              </div>
-              <header class="card__header">
-                <h3 class="plan__name">Chatroom</h3>
-              </header>
-            </div>
-          </div>
-        </a>
-        <a href="profile.html">
-          <div class="plan">
-            <div class="card card--tertiary">
-              <div class="card__body">
-                <img src="images/icons/user_color.svg" alt="Profile" />
-              </div>
-              <header class="card__header">
-                <h3 class="plan__name">Profile</h3>
-              </header>
-            </div>
-          </div>
-        </a>
-      </div>
-      <button data-aos="zoom-in-up" class="btn btn--outline btn--block">
-        Find out more
-      </button>
-    </section>
 
-    <!-- Details Section -------------------------------------------------------------------------- -->
-    <section class="block block--light block-showcase">
-      <header class="block__header">
-        <h2>The place to be for Brighton Uni students</h2>
-      </header>
-      <div class="container grid grid--1x2">
-        <picture data-aos="fade-right" class="block-showcase__image">
-          <source
-            type="image/webp"
-            srcset="images/ipad.webp 1x, images/ipad@2x.webp 2x"
-          />
-          <source
-            type="image/png"
-            srcset="images/ipad.png 1x, images/ipad@2x.png 2x"
-          />
-          <img src="images/ipad.png" alt="" />
-        </picture>
-        <ul class="list" data-aos="fade-up">
-          <li>
-            <div class="details">
-              <div class="details__image">
-                <img
-                  class="icon icon--primary"
-                  src="images/icons/shop_bw.svg"
-                  alt="Shop"
-                />
-              </div>
-              <div class="details__body">
-                <h3 class="details__title">The Shop</h3>
-                <p>
-                  Looking to buy or sell University related items or equipment?
-                  You're in the right place. Find or list Uni related
-                  accessories and resources among the student community.
-                </p>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="details">
-              <div class="details__image">
-                <img
-                  class="icon icon--primary"
-                  src="images/icons/chat_bw.svg"
-                  alt="Chatroom"
-                />
-              </div>
-              <div class="details__body">
-                <h3 class="details__title">The Chatroom</h3>
-                <p>
-                  Enter the chatroom which is are forums dedicated to UoB
-                  students. Find coursemates or likeminded people to chat,
-                  share, socialise or even form study groups with.
-                </p>
+        <div class="plan">
+            <div class="profileCard">
+              <h3>Active Chatroom</h3>
+              <a href="#"><li> Computer Science</li></a>
+              <a href="#"><li> Computer Science with Cyber Security</li></a>
+
+              <hr />
+
+              <h3>Previous Orders From Shop</h3>
+              <img src="pens.jpeg" alt="Pens">
+              <img src="notebooks.jpg" alt="Notebooks">
+              <img src="highlighters.jpeg" alt="Highlighters">
+
+              <hr />
+
+              <h3>Linked Socials</h3>
+              <div class="social">
+                <a href="#" target="blank">
+                  <img
+                    class="icon"
+                    src="images/icons/facebook_color.svg"
+                    alt="Facebook"
+                  />
+                </a>
+
+                <a href="#" target="blank">
+                  <img
+                    class="icon"
+                    src="images/icons/twitter_color.svg"
+                    alt="Twitter"
+                  />
+                </a>
+
+                <a href="#" target="blank">
+                  <img
+                    class="icon"
+                    src="images/icons/instagram_color.svg"
+                    alt="Instagram"
+                  />
+                </a>
               </div>
             </div>
-          </li>
-          <li>
-            <div class="details">
-              <div class="details__image">
-                <img
-                  class="icon icon--primary"
-                  src="images/icons/user_bw.svg"
-                  alt="Profile" 
-                />
-              </div>
-              <div class="details__body">
-                <h3 class="details__title">Your Profile</h3>
-                <p>
-                  View and customise your profile settings: Control how other
-                  site users see your profile, access privacy settings and
-                  update your details.
-                </p>
-              </div>
-            </div>
-          </li>
-        </ul>
+          </div>
       </div>
-    </section>
 
     <!-- Footer -------------------------------------------------------------------------- -->
     <footer class="block block--dark footer">
@@ -326,7 +260,6 @@
 
     <script src="js/main.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>    
     <script>
       AOS.init();
     </script>

@@ -66,7 +66,7 @@
 	<div class="Cartcontainer">
    <div class="text-right"><button class="btn btn-primary" data-toggle="modal" data-target="#cartModal">Cart ({{cartItems.length}})</button></div>
   
-   <!-- Modal --> 
+   <!-- Modal  
    <div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
       <div class="modal-dialog" role="document">
          <div class="modal-content">
@@ -100,7 +100,7 @@
                         </tr>
                      </table>
                   </div>
-                  <!-- /.container -->
+                  
                </shopping-cart>
             </div>
             <div class="modal-footer">
@@ -111,20 +111,10 @@
    </div>
 	</div>
 	
-	
+	-->
 	
 	   <div class="productcontainer">
-   <div class="container">
-      <div class="row">
-         <div class="col-xs-4 text-center" v-for="item in items">
-            <img class="img-responsive" :src="item.image" alt="">
-            
-            <p class="text-center"><input v-model="item.qty" type="number" class="form-control" placeholder="Qty" min="1"/></p>
-							 
-               <button @click="addToCart(item)" class="btn btn-sm btn-primary">Add to Cart</button>
-            </p>
-         </div>
-      </div>
+   
    </div>
 </div>
 </div>
@@ -134,108 +124,25 @@
       
 			<div class="grid-column">
         
-								<a class="product plan" href="#">
-					<div class="product-image">
-						<img src="https://assets.codepen.io/285131/cosmonaut.jpg" />
-					</div>
-					<div class="product-content">
-						<div class="product-info">
-							<h2 class="product-title">Item 1</h2>
-							<p class="product-price">£ 10</p>
-						</div>
-			
-					</div>
-				</a>
+			<?php
+            include 'userDb.php';
 
-				<a class="product plan" href="#">
-					<div class="product-image">
-						<img src="https://assets.codepen.io/285131/hand-drawn-monster-milkshake.jpg" />
-					</div>
-					<div class="product-content">
-						<div class="product-info">
-							<h2 class="product-title">Item 2</h2>
-							<p class="product-price">£ 9</p>
-						</div>
+            $sql = "SELECT * FROM products;";
+            $result = mysqli_query($connect, $sql);
+            if (mysqli_num_rows($result) > 0){
+            while ($record = mysqli_fetch_assoc($result)){
+                echo '<img src="' . $record['image'] . '">';
+                echo "<p>" . $record['title'] . "<br>";
+                echo $record['price'] . "</p><br>";
+                    }
+            }
+            else{
+            echo "No products";
+            }
+            ?>
 		
-					</div>
-				</a>
-				<a class="product plan" href="#">
-					<div class="product-image">
-							<img src="https://assets.codepen.io/285131/pink-pastel-juicy-banana.jpg" />
-					</div>
-					<div class="product-content">
-						<div class="product-info">
-							<h2 class="product-title">Item 3</h2>
-							<p class="product-price">£ 9</p>
-						</div>
 						
-					</div>
-				</a>
-			</div>
-			<div class="grid-column">
-				<a class="product plan" href="#">
-					<div class="product-image">
-						<img src="https://assets.codepen.io/285131/palmistry.jpg" />
-					</div>
-					<div class="product-content">
-						<div class="product-info">
-							<h2 class="product-title">Item 4</h2>
-							<p class="product-price">£ 9</p>
-						</div>
-					
-					</div>
-				</a>
-				<a class="product plan" href="#">
-					<div class="product-image"> 
-						<img src="https://assets.codepen.io/285131/fish-gas-mark.jpg" />
-					</div>
-					<div class="product-content">
-						<div class="product-info">
-							<h2 class="product-title">Item 5</h2>
-							<p class="product-price">£ 12</p>
-						</div>
-					
-					</div>
-				</a>
-				<a class="product plan" href="#">
-					<div class="product-image">
-						<img src="https://assets.codepen.io/285131/mysterious-gangster-character-style.jpg" />
-					</div>
-					<div class="product-content">
-						<div class="product-info">
-							<h2 class="product-title">Item 6</h2>
-							<p class="product-price">£ 5</p>
-						</div>
 				
-					</div>
-				</a>
-			</div>
-			<div class="grid-column">
-				<a class="product plan" href="#">
-					<div class="product-image">
-						<img src="https://assets.codepen.io/285131/adventure.jpg" />
-					</div>
-					<div class="product-content">
-						<div class="product-info">
-							<h2 class="product-title">Item 7</h2>
-							<p class="product-price">£ 15</p>
-						</div>
-					
-            
-					</div>
-				</a>
-				<a class="product plan" href="#">
-					<div class="product-image">
-						<img src="https://assets.codepen.io/285131/illustration-hand-with-cigarette-icon.jpg" />
-					</div>
-					<div class="product-content">
-						<div class="product-info">
-							<h2 class="product-title">Item 8</h2>
-							<p class="product-price">£ 5</p>
-						</div>
-						
-					</div>
-				</a>
 			</div>
 		</div>
 	</div>
@@ -342,7 +249,8 @@
 <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
-<script  src="assets/scripts/script.js"></script>
 
 </body>
 </html>
+
+

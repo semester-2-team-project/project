@@ -15,7 +15,6 @@ $password="";
 
 
 if (isset($_POST['submit'])){
-    $uname = $_POST["username"];
     $email= $_POST["email"];
     $password=$_POST["password"];
     
@@ -23,8 +22,6 @@ if (isset($_POST['submit'])){
 else{
     exit(header("Location: https://jeh80.brighton.domains/login.html"));
 }
-
-
 $sql = "SELECT * FROM users WHERE email = ? AND pass = ?;"; 
 $resp = mysqli_stmt_init($connect);
 if (!mysqli_stmt_prepare($resp, $sql)){
@@ -33,23 +30,12 @@ if (!mysqli_stmt_prepare($resp, $sql)){
 mysqli_stmt_bind_param($resp, "ss", $email, $password);
 mysqli_stmt_execute($resp);
 $result = mysqli_stmt_get_result($resp);
+$uname = $result['usersName'];
 
-if ($result->num_rows == 1) {
+if ($row = mysqli_fetch_assoc($result)) {
+    $uname = $row['usersName'];
     exit(header("Location: https://jeh80.brighton.domains/market.html?name=$uname"));
 }
-
-
-
-
-    
-    
-    
-    #while ($row = mysqli_fetch_assoc($result)) {
-     #   echo "<p>";
-      #  echo "$row['name']";
-       # echo "<br>";
-        #echo "$row['email']";
-        #echo "</p>"
-   # }
-
-
+else {
+    exit(header("Location: https://jeh80.brighton.domains/login.html?error=userNotFound"));
+}

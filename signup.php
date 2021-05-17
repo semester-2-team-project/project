@@ -40,18 +40,13 @@ mysqli_stmt_bind_param($resp, "s", $email);
 mysqli_stmt_execute($resp);
 $result = mysqli_stmt_get_result($resp);
 
-    #if(mysqli_fetch_assoc($result)){
-
-   # }
-
-
-
 if ($result->num_rows > 0){
     exit(header("Location: https://jeh80.brighton.domains/signup.html?error=userExists"));
 }
 else {
+$hashpwd = password_hash($password, PASSWORD_DEFAULT); #left this line in as the hashing was successful but was not getting matches within the login script.
 $newUser = "INSERT INTO users (usersName, email, pass) VALUES ('$uname', '$email', '$password');";
 $insert = mysqli_query($connect, $newUser);#
 exit(header("Location: https://jeh80.brighton.domains/market.html?name=$uname"));
 }
-    
+mysqli_stmt_close($resp);

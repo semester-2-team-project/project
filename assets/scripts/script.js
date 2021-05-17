@@ -7,15 +7,19 @@ const products = [
   { id: 6, title: '6', price: 10, qty: 1, image: 'http://lorempixel.com/150/150/' },
   { id: 7, title: '7', price: 150.00, qty: 1, image: 'http://lorempixel.com/150/150/' },
   { id: 8, title: '8', price: 10, qty: 1, image: 'http://lorempixel.com/150/150/' }];
+
+
   
-  // Load php on browser loading page
-  $(document).ready( function() {
-    $.get("#/market.php", function(data){
-      $("#id").load() 
-    });
-  
-  });
-  
+// Load php on browser loading page
+//  $(document).ready( function() {
+//  $(".product-title").load("https://jeh80.brighton.domains/market.php");
+//		$(".product-price").load("https://jeh80.brighton.domains/marketPrice.php");
+//		$(".product-image").load("https://jeh80.brighton.domains/marketImage.php");
+// });
+
+
+
+
   function formatNumber(n, c, d, t) {
     var c = isNaN(c = Math.abs(c)) ? 2 : c,
     d = d === undefined ? '.' : d,
