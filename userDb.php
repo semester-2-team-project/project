@@ -2,7 +2,6 @@
 $servername = "localhost";
 $username = "jeh80_dbUser";
 #omitted password due to public repo
-$password ="TZqeQj7yitCMFDK";
 $dbname = "jeh80_phpapp";
  
 #need to store password hashed in a config file.
